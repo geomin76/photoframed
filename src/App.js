@@ -8,6 +8,22 @@ const App = () => {
   const handleChange = (event) => {
     setFile(URL.createObjectURL(event.target.files[0]))
   }
+  
+  /**
+   * TODO:
+   * Add type of painting (randomized), Acrylic on canvas, oil, etc
+   * Add where the painting came from (randomized)
+   * Also add the year of created
+   * 
+   * Image CSS organization
+   * Add picture frame around the image
+   * Add the "paper-like" museum portion
+   * Figure out ratios and where to put paper item
+   * Downloadable image
+   * 
+   * Pretty it up
+   * Transitions and animations
+   */
 
   return (
     <Container maxWidth="sm" >
@@ -19,12 +35,6 @@ const App = () => {
       </Box>
       <Box display="flex" justifyContent="center" alignItems="center" paddingTop={2}>
         <img src={file} alt="" width="100%"/>
-
-        {/* 
-          Add a type of painting (Acrylic on canvas, oil, etc) 
-          Add where the gift came from
-          Also add the date of today create
-        */}
 
       </Box>
       <Box p={1}>
