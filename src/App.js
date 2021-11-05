@@ -15,7 +15,7 @@ const App = () => {
     <Router>
       <Switch>
         <Route exact path="/">
-          <Start file={file} setFile={setFile} setArtwork={setArtwork} setYear={setYear} setName={setName}/>
+          <Start file={file} name={name} artwork={artwork} setFile={setFile} setArtwork={setArtwork} setYear={setYear} setName={setName}/>
         </Route>
         <Route exact path="/art">
           <Result file={file} artwork={artwork} year={year} name={name}/>
