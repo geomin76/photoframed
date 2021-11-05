@@ -3,7 +3,7 @@ import { useState } from 'react';
 import "./App.css"
 import { useHistory } from "react-router";
 
-export const Start = ({file, setFile, setArtwork, setYear, setName}) => {
+export const Start = ({file, name, artwork, setFile, setArtwork, setYear, setName}) => {
 
     const history = useHistory();
 
@@ -25,9 +25,7 @@ export const Start = ({file, setFile, setArtwork, setYear, setName}) => {
     
     /**
      * TODO:
-     * Add type of painting (randomized), Acrylic on canvas, oil, etc
      * Add where the painting came from (randomized)
-     * Also add the year of created
      * 
      * Image CSS organization
      * Add picture frame around the image
@@ -61,7 +59,8 @@ export const Start = ({file, setFile, setArtwork, setYear, setName}) => {
           <Input type="text" onChange={handleNameChange} placeholder="Name of the artist" fullWidth />
         </Box>
         <Box paddingTop={2} paddingBottom={2} display="flex" justifyContent="center" alignItems="center">
-          <Button onClick={() => history.push("/art")} variant="outlined">Put it in the Louvre!</Button>
+          { (artwork !== "" && name !== "" && file !== null) && <Button onClick={() => history.push("/art")} variant="outlined">Put it in the Louvre!</Button> }
+          { (artwork === "" || name === "" || file === null) && <Button disabled variant="outlined">Put it in the Louvre!</Button> }
         </Box>
       </Container>
     );
