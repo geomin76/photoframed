@@ -25,15 +25,14 @@ export const Start = ({file, name, artwork, setFile, setArtwork, setYear, setNam
     
     /**
      * TODO:
-     * Add where the painting came from (randomized)
      * 
      * Image CSS organization
      * Add picture frame around the image
-     * Add the "paper-like" museum portion
      * Figure out ratios and where to put paper item
      * Downloadable image
      * 
      * Pretty it up
+     * Put the source of art on the bottom of the paper instead of the middle
      * Transitions and animations
      */
   

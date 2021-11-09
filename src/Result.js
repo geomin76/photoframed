@@ -1,6 +1,6 @@
-import { Container, Box, Button, Paper } from '@mui/material';
+import { Container, Box, Button, Paper, Grid } from '@mui/material';
 import { useHistory } from 'react-router';
-import { PaintingType } from './Helper';
+import { PaintingType, Source } from './Helper';
 
 export const Result = ({ file, artwork, year, name }) => {
 
@@ -29,6 +29,9 @@ export const Result = ({ file, artwork, year, name }) => {
                     </Box>
                     <Box paddingLeft={3}>
                         <p style={{ fontSize: "15px", paddingTop: 0 }}>{PaintingType()}</p>
+                    </Box>
+                    <Box paddingLeft={3} alignItems="flex-end">
+                        <p style={{ fontSize: "12px" }}>{Source()}</p>
                     </Box>
                 </Paper>
             </Box>
