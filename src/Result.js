@@ -1,6 +1,7 @@
 import { Container, Box, Button, Paper, Grid } from '@mui/material';
 import { useHistory } from 'react-router';
 import { PaintingType, Source } from './Helper';
+import './App.css'
 
 export const Result = ({ file, artwork, year, name }) => {
 
@@ -35,9 +36,11 @@ export const Result = ({ file, artwork, year, name }) => {
                     </Box>
                 </Paper>
             </Box>
-            <Box p={2}>
-                <img src={file} alt="" width="100%"/>
-            </Box>
+            {/* <Box p={2}> */}
+                <div className="frame">
+                    <img src={file} alt=""/>
+                </div>
+            {/* </Box> */}
         </Container>
     )
 }

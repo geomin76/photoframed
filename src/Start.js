@@ -27,7 +27,6 @@ export const Start = ({file, name, artwork, setFile, setArtwork, setYear, setNam
      * TODO:
      * 
      * Image CSS organization
-     * Add picture frame around the image
      * Figure out ratios and where to put paper item
      * Downloadable image
      * 
