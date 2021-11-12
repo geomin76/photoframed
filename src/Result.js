@@ -1,6 +1,6 @@
 import { Container, Box, Button, Paper, Grid } from '@mui/material';
 import { useHistory } from 'react-router';
-import { PaintingType, Source } from './Helper';
+import { PaintingType } from './Helper';
 import './App.css'
 
 export const Result = ({ file, artwork, year, name }) => {
@@ -8,7 +8,7 @@ export const Result = ({ file, artwork, year, name }) => {
     const history = useHistory();
 
     return (
-        <Container maxWidth="md">
+        <Container maxWidth="lg">
             <Box display="flex" justifyContent="center" alignItems="center">
                 <h1 onClick={() => history.push("/")}>Put it in the Louvre</h1>
             </Box>
@@ -16,7 +16,7 @@ export const Result = ({ file, artwork, year, name }) => {
                 display: 'flex',
                 flexWrap: 'wrap',
                 '& > :not(style)': {
-                m: 1,
+                m: 4,
                 width: 425,
                 height: 250,
                 },
@@ -31,16 +31,11 @@ export const Result = ({ file, artwork, year, name }) => {
                     <Box paddingLeft={3}>
                         <p style={{ fontSize: "15px", paddingTop: 0 }}>{PaintingType()}</p>
                     </Box>
-                    <Box paddingLeft={3} alignItems="flex-end">
-                        <p style={{ fontSize: "12px" }}>{Source()}</p>
-                    </Box>
                 </Paper>
             </Box>
-            {/* <Box p={2}> */}
-                <div className="frame">
-                    <img src={file} alt=""/>
-                </div>
-            {/* </Box> */}
+            <div className="frame">
+                <img src={file} alt=""/>
+            </div>
         </Container>
     )
 }
