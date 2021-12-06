@@ -1,4 +1,4 @@
-import { Container, Box, Button, Paper, Grid } from '@mui/material';
+import { Container, Box, Paper, Grid } from '@mui/material';
 import { useHistory } from 'react-router';
 import { PaintingType } from './Helper';
 import './App.css'
