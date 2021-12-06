@@ -38,7 +38,7 @@ export const Start = ({file, name, artwork, setFile, setArtwork, setYear, setNam
       <Container maxWidth="sm" >
 
         <Box display="flex" justifyContent="center" alignItems="center">
-          <h1 onClick={() => history.push("/")}>Put it in the Louvre</h1>
+          <h1 onClick={() => history.push("/")}>photoframed</h1>
         </Box>
 
         <Box display="flex" justifyContent="center" alignItems="center">
@@ -62,8 +62,8 @@ export const Start = ({file, name, artwork, setFile, setArtwork, setYear, setNam
         </Box>
 
         <Box paddingTop={2} paddingBottom={2} display="flex" justifyContent="center" alignItems="center">
-          { (artwork !== "" && name !== "" && file !== null) && <Button onClick={() => history.push("/art")} variant="outlined">Put it in the Louvre!</Button> }
-          { (artwork === "" || name === "" || file === null) && <Button disabled variant="outlined">Put it in the Louvre!</Button> }
+          { (artwork !== "" && name !== "" && file !== null) && <Button onClick={() => history.push("/art")} variant="outlined">Frame it!</Button> }
+          { (artwork === "" || name === "" || file === null) && <Button disabled variant="outlined">Frame it!</Button> }
         </Box>
         
       </Container>
