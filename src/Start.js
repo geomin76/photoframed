@@ -47,7 +47,7 @@ export const Start = ({file, name, artwork, setFile, setArtwork, setYear, setNam
         </Box>
 
         <Box display="flex" justifyContent="center" alignItems="center" paddingTop={2}>
-          <img src={file} alt="" width="100%"/>
+          { file && <img src={file} alt="" width="100%"/>}
         </Box>
 
         <Box paddingTop={2} paddingBottom={2}>
