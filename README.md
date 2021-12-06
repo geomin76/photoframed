@@ -1,4 +1,4 @@
-# Photo framed
+# Photoframed
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c09458a4-95d7-454e-a656-4fd68d8d415f/deploy-status)](https://app.netlify.com/sites/photoframed/deploys)
 
