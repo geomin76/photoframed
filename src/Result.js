@@ -14,9 +14,11 @@ export const Result = ({ file, artwork, year, name, setFile }) => {
     const handleDownloadImage = async () => {
         const element = printRef.current
         const canvas = await html2canvas(element, {
-          windowWidth: '1280px',
           useCORS: true,
-          scale: 4
+          scale: 4,
+          allowTaint: true,
+          imageTimeout: 15000,
+          logging: true, 
         });
      
         const data = canvas.toDataURL('image/png');
@@ -33,6 +35,7 @@ export const Result = ({ file, artwork, year, name, setFile }) => {
           window.open(data);
         }
       };
+      
 
     return (
         <Container maxWidth="xl">
